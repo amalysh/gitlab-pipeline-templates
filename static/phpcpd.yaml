@@ -14,7 +14,7 @@ variables:
   script:
     - composer create-project sebastian/phpcpd /tmp/phpcpd
     - mkdir -p reports/phpcpd
-    - php /tmp/phpcpd/phpcpd --paths-exclude="#.*Test.*#" --log-pmd=reports/phpcpd/phpcpd.xml $LINT_DIRS
+    - php /tmp/phpcpd/phpcpd --exclude="#.*Test.*#" --log-pmd=reports/phpcpd/phpcpd.xml $LINT_DIRS
   artifacts:
     paths:
       - reports
